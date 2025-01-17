@@ -12,7 +12,7 @@ Setup the repo with `mix setup`
 
  ![dealer](./docs/assets/dealer-select.png)
 
- * Select a car:
+ * Select a car and do not submit the form:
 
  ![car](./docs/assets/car-select.png)
 
@@ -47,3 +47,4 @@ reconnected() { this.selection && this.selection.length > 0 && this.pushEventTo(
 
  * Run `mix deps.compile`
  * Perform the same steps to reproduce the issue.
+ * submit the form to see that the selection was conserved.
