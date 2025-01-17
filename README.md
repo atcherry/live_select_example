@@ -30,15 +30,15 @@ Setup the repo with `mix setup`
  > before
 
 ```javascript
-this.pushEventTo(this.el, "selection_recovery", this.selection)
+reconnected() { this.selection && this.selection.length > 0 && this.pushEventTo(this.el, "selection_recovery", this.selection) }
 ```
 
  ![before](./docs/assets/before.png)
 
- > after
+ > after: call `this.el.id` instead of `this.el`
 
 ```javascript
-this.pushEventTo(this.el.id, "selection_recovery", this.selection)
+reconnected() { this.selection && this.selection.length > 0 && this.pushEventTo(this.el.id, "selection_recovery", this.selection) }
 ```
 
  ![after](./docs/assets/after.png)
