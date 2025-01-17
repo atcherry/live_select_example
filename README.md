@@ -1,7 +1,9 @@
 # live_select_example
 
 This repo demonstrates an issue with live_select's selection_recover event.
-All the necessary code is provided under `./lib/phx_playground_web/live/home`
+All the necessary code is provided under `./lib/phx_playground_web/live/home`.
+The example is contrived, but is meant to replicate a similar setup in a repository
+with this issue.
 
 Setup the repo with `mix setup`
 
