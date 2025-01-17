@@ -27,18 +27,20 @@ Setup the repo with `mix setup`
 
  * Modify the `reconnected()` callback in `./deps/live_select/priv/static/live_select.min.js` by changing `this.pushEventTo(...)`:
 
- > before
-
 ```javascript
+// Before
 reconnected() { this.selection && this.selection.length > 0 && this.pushEventTo(this.el, "selection_recovery", this.selection) }
+// After                                                                       change --↴
+reconnected() { this.selection && this.selection.length > 0 && this.pushEventTo(this.el.id, "selection_recovery", this.selection) }
+
 ```
+ > before
 
  ![before](./docs/assets/before.png)
 
  > after: call `this.el.id` instead of `this.el`
 
 ```javascript
-reconnected() { this.selection && this.selection.length > 0 && this.pushEventTo(this.el.id, "selection_recovery", this.selection) }
 ```
 
  ![after](./docs/assets/after.png)
